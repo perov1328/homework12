@@ -4,11 +4,11 @@ from utils import arrs
 def test_get():
     assert arrs.get([1, 2, 3], 1, "test") == 2
     assert arrs.get([], 0, "test") == "test"
-    assert arrs.get([1, 2, 3], 1, int) == 2
+    assert arrs.get([1, 2, 3], 1, 2) == 2
     assert arrs.get([1, 2, 3], 0, 1) == 1
-    assert arrs.get([1, 2, 3], 2, int) == 3
+    assert arrs.get([1, 2, 3], 2, 3) == 3
     assert arrs.get(["test", 1, 2], 0, "test") == "test"
-    assert arrs.get([1, 2, 3], -3, int) == int
+    assert arrs.get([1, 2, 3], -3, 1) == 1
 
 
 def test_slice():
